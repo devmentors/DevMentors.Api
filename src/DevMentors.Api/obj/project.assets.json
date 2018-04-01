@@ -4746,6 +4746,43 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "DevMentors.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DevMentors.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevMentors.Common.dll": {}
+        }
+      },
+      "DevMentors.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DevMentors.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevMentors.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevMentors.DataAccess.dll": {}
+        }
+      },
+      "DevMentors.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DevMentors.Common": "1.0.0",
+          "DevMentors.DataAccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevMentors.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevMentors.Domain.dll": {}
+        }
       }
     }
   },
@@ -12524,10 +12561,26 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "DevMentors.Common/1.0.0": {
+      "type": "project",
+      "path": "../DevMentors.Common/DevMentors.Common.csproj",
+      "msbuildProject": "../DevMentors.Common/DevMentors.Common.csproj"
+    },
+    "DevMentors.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DevMentors.DataAccess/DevMentors.DataAccess.csproj",
+      "msbuildProject": "../DevMentors.DataAccess/DevMentors.DataAccess.csproj"
+    },
+    "DevMentors.Domain/1.0.0": {
+      "type": "project",
+      "path": "../DevMentors.Domain/DevMentors.Domain.csproj",
+      "msbuildProject": "../DevMentors.Domain/DevMentors.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "DevMentors.Domain >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -12560,7 +12613,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.Domain/DevMentors.Domain.csproj": {
+              "projectPath": "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.Domain/DevMentors.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

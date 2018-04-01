@@ -25,6 +25,29 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "DevMentors.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/DevMentors.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevMentors.Common.dll": {}
+        }
+      },
+      "DevMentors.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "DevMentors.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevMentors.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevMentors.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -169,10 +192,22 @@
         "netstandard.library.2.0.0.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "DevMentors.Common/1.0.0": {
+      "type": "project",
+      "path": "../DevMentors.Common/DevMentors.Common.csproj",
+      "msbuildProject": "../DevMentors.Common/DevMentors.Common.csproj"
+    },
+    "DevMentors.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DevMentors.DataAccess/DevMentors.DataAccess.csproj",
+      "msbuildProject": "../DevMentors.DataAccess/DevMentors.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "DevMentors.Common >= 1.0.0",
+      "DevMentors.DataAccess >= 1.0.0",
       "NETStandard.Library >= 2.0.0"
     ]
   },
@@ -204,7 +239,14 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.DataAccess/DevMentors.DataAccess.csproj": {
+              "projectPath": "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.DataAccess/DevMentors.DataAccess.csproj"
+            },
+            "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.Common/DevMentors.Common.csproj": {
+              "projectPath": "/Users/Darek/Repositories/DevMentors.Api/src/DevMentors.Common/DevMentors.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
