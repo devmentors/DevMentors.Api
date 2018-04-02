@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DevMentors.Common
+namespace DevMentors.Messages
 {
     public class Class1
     {

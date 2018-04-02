@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="../DevMentors.Domain/DevMentors.Domain.csproj" />
     <ProjectReference Include="../DevMentors.Common/DevMentors.Common.csproj" />
+    <ProjectReference Include="../DevMentors.Messages/DevMentors.Messages.csproj" />
   </ItemGroup>
 
   <ItemGroup>
